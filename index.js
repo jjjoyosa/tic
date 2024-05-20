@@ -8,12 +8,7 @@ const {Server}=require("socket.io")
 
 const server=http.createServer(app)
 
-const io=new Server(server, {
-    cors: {
-        origin: "https://tic-smoky.vercel.app/",
-        methods: ["GET", "POST"],
-    },
-})
+const io=new Server(server)
 app.use(express.static(path.resolve("")))
 
 let arr=[]
